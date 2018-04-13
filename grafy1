@@ -6,7 +6,12 @@ n=int(input('Liczba wierzcholkow: '))
 for a in range(n):
     for s in range (a):
         d.append(t[s][a])
-    x=d+['0']+input('wartości wierzchołka:').split()
+    f=input('wartości wierzchołka:').split()
+    for cos in f:
+        if int(cos)<0:
+            print('blad')
+            sys.exit();
+    x=d+[0]+f
     t.append(x)
     #print(t, ' ', ' ', d, ', a)
     d = []
